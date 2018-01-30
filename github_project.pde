@@ -1,6 +1,9 @@
   float blink=100;
   boolean lukker;
   
+  import processing.sound.*;
+SoundFile file;
+  
 void setup(){
   size(1000,500);
    rectMode(CENTER);
@@ -28,5 +31,6 @@ void hus(float x, float y){
 }
 
 void mousePressed(){
-    lukker = true;
+     file = new SoundFile(this, "01 Kærligheden Brænder (Party Version).mp3");
+   file.play();
   }
